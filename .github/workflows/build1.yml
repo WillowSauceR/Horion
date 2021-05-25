@@ -23,7 +23,7 @@ jobs:
 
     - name: Cache
       # Build your program with the given configuration
-      run: cmake
+      run: cmake .
       
     - name: Build
       run: cmake --build ${{github.workspace}}/
