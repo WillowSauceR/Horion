@@ -21,6 +21,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Build
+    - name: Cache
       # Build your program with the given configuration
-      run: cmake --build ${{github.workspace}}/build
+      run: cmake
+      
+    - name: Build
+      run: cmake --build ${{github.workspace}}/
